@@ -2,19 +2,24 @@ const core = require('@actions/core');
 const { exec } = require("child_process");
 
 try {
-    exec("./binaries/assembly-differ.exe -h", (error, stdout, stderr) => {
+    const args = core.getInput('args');
+    core.setOutput('Running assembly differ');
+
+    exec(`./binaries/assembly-differ.exe ${args}`, (error, stdout, stderr) => {
+        core.setOutput('Running inside callback');
+
         if (error) {
-            core.setOutput(`error: ${error.message}`);
+            core.setFailed(`error: ${error.message}`);
             return;
         }
+
         if (stderr) {
-            core.setOutput(`stderr: ${stderr}`);
+            core.setFailed(`stderr: ${stderr}`);
             return;
         }
 
         core.setOutput(`stdout: ${stdout}`);
     });
-
 } catch (error) {
     core.setFailed(error.message);
 }

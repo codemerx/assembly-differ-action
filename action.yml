@@ -1,5 +1,10 @@
 name: 'Assembly Differ'
 description: 'Compare and Diff assemblies from different sources'
+inputs:
+  args:
+    description: 'Assembly Differ arguments'
+    required: true
+    default: '-h'
 runs:
   using: 'node12'
   main: 'index.js'
