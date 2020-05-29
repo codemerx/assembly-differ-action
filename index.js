@@ -4,7 +4,7 @@ const { exec } = require("child_process");
 try {
     const args = core.getInput('args');
 
-    exec(`..\\..\\_actions\\codemerx\\assembly-differ-action\\v0.2.10\\binaries\\assembly-differ.exe ${args}`, (error, stdout, stderr) => {
+    exec(`..\\..\\_actions\\codemerx\\assembly-differ-action\\v0.2.12\\binaries\\assembly-differ.exe ${args}`, (error, stdout, stderr) => {
         if (error) {
             core.setFailed(`error: ${error.message}`);
             return;
