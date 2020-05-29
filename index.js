@@ -5,7 +5,7 @@ try {
     const args = core.getInput('args');
     core.setOutput('Running assembly differ');
 
-    exec(`./binaries/assembly-differ.exe ${args}`, (error, stdout, stderr) => {
+    exec(`.\\binaries\\assembly-differ.exe ${args}`, (error, stdout, stderr) => {
         core.setOutput('Running inside callback');
 
         if (error) {
