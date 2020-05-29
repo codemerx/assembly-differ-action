@@ -3,11 +3,8 @@ const { exec } = require("child_process");
 
 try {
     const args = core.getInput('args');
-    core.setOutput('Running assembly differ');
 
-    exec(`dir`, (error, stdout, stderr) => {
-        core.setOutput('Running inside callback');
-
+    exec(`..\\v0.2.6\\binaries\\assembly-differ.exe ${args}`, (error, stdout, stderr) => {
         if (error) {
             core.setFailed(`error: ${error.message}`);
             return;
