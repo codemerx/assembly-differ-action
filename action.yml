@@ -1,13 +1,5 @@
 name: 'Assembly Differ'
 description: 'Compare and Diff assemblies from different sources'
-inputs:
-  options:  # id of input
-    description: 'Assembly differ options'
-    required: true
-    default: ['--help']
-outputs:
-  output-log: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'node12'
   main: 'index.js'
