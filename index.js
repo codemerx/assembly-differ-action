@@ -18,7 +18,7 @@ try {
             return;
         }
 
-        core.setOutput(`stdout: ${stdout}`);
+        core.info(`stdout: ${stdout}`);
     });
 } catch (error) {
     core.setFailed(error.message);
