@@ -3,9 +3,10 @@ const { exec } = require("child_process");
 
 try {
     const args = core.getInput('args');
-    core.info(`path: ${core.getInput('repository')}`);
+    const repository = core.getInput('repository');
+    core.info(`path: ${repository}`);
 
-    exec(`..\\..\\_actions\\codemerx\\assembly-differ-action\\v0.2.12\\binaries\\assembly-differ.exe ${args}`, (error, stdout, stderr) => {
+    exec(`..\\..\\_actions\\codemerx\\assembly-differ-action\\v0.3.1\\binaries\\assembly-differ.exe ${args}`, (error, stdout, stderr) => {
         if (error) {
             core.setFailed(`error: ${error.message}`);
             return;
@@ -16,6 +17,10 @@ try {
             return;
         }
 
+        core.info(`stdout: ${stdout}`);
+    });
+
+    exec(`DIR`, (error, stdout, stderr) =>{
         core.info(`stdout: ${stdout}`);
     });
 } catch (error) {

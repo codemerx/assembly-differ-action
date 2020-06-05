@@ -6,7 +6,7 @@ inputs:
     required: true
     default: '-h'
   repository:
-    description: ''
+    description: 'Action repository'
     required: true
     default: ${{github.workspace}}
 runs:
