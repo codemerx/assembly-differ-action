@@ -20,14 +20,6 @@ const main = () => {
     
             core.info(`stdout: ${stdout}`);
         });
-    
-        exec(`DIR assembly-differ-action`, (error, stdout, stderr) =>{
-            core.info(`stdout: ${stdout}`);
-        });
-    
-        exec(`DIR assembly-differ-action\\binaries`, (error, stdout, stderr) =>{
-            core.info(`stdout: ${stdout}`);
-        });
     } catch (error) {
         core.setFailed(error.message);
     }
