@@ -5,6 +5,10 @@ inputs:
     description: 'Assembly Differ arguments'
     required: true
     default: '-h'
+  repository:
+    description: ''
+    required: true
+    default: ${{github.workspace}}
 runs:
   using: 'node12'
   main: 'index.js'
