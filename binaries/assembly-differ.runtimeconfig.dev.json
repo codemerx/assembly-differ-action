@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\CodeMerx\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\CodeMerx\\.nuget\\packages"
-    ]
-  }
-}

@@ -5,10 +5,6 @@ inputs:
     description: 'Assembly Differ arguments'
     required: true
     default: '-h'
-  assembly-differ-binaries:
-    description: 'Binaries folder of assembly-differ'
-    required: true
-    default: ${{github.workspace}}
 runs:
   using: 'node12'
   main: 'index.js'
