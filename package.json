@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/codemerx/assembly-differ-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "child_process": "^1.0.2"
   }
 }
