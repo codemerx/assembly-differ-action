@@ -16,6 +16,9 @@
 
 name: 'Assembly Differ'
 description: 'Ensure library''s public API has the expected level of changes (major, minor or patch) since a previous version.'
+branding:
+  icon: 'activity'
+  color: 'blue'
 inputs:
   args:
     description: 'Assembly Differ arguments'
