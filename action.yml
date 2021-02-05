@@ -15,7 +15,7 @@
 #  along with Assembly Differ. If not, see <https:#www.gnu.org/licenses/>.
 
 name: 'Assembly Differ'
-description: 'Ensure library's public API has the expected level of changes (major, minor or patch) since a previous version.'
+description: 'Ensure library''s public API has the expected level of changes (major, minor or patch) since a previous version.'
 inputs:
   args:
     description: 'Assembly Differ arguments'
